@@ -1,0 +1,14 @@
+{
+  "name": "tuto-vpn-iphone",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "slidev slides.md --open",
+    "build": "slidev build slides.md",
+    "export": "slidev export slides.md --format pdf --output tuto-vpn-iphone.pdf"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.50.0",
+    "@slidev/theme-default": "*"
+  }
+}
