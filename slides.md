@@ -86,26 +86,20 @@ class: gap-4
 
 # Étape 1 — Installer l'app
 
-<div class="pr-6 pt-4 text-lg leading-relaxed">
+<div class="pr-6 pt-6 text-lg leading-relaxed">
 
-1. Ouvre l'**App Store** 🛒
+Installe l'app **WireGuard** depuis l'**App Store**.
 
-2. Cherche : **`WireGuard`**
-
-3. Repère l'app à l'**icône dragon violet** 🐉
-
-4. Appuie sur **Obtenir** / le nuage ☁️
-
-5. Attends la fin de l'installation
+Juste un repère pour ne pas te tromper d'app : son icône est un **dragon blanc sur fond rouge** 🐉.
 
 </div>
 
 ::right::
 
 <div class="flex items-center justify-center h-full">
-<div class="p-8 rounded-2xl bg-purple-500 bg-opacity-15 border border-purple-500 border-opacity-30 text-center">
+<div class="p-8 rounded-2xl bg-gray-500 bg-opacity-10 border border-gray-400 border-opacity-30 text-center">
 
-<div class="text-7xl pb-4">🐉</div>
+<img src="/wireguard-icon.webp" alt="Icône WireGuard : dragon blanc sur fond rouge" class="w-28 h-28 mx-auto mb-4 rounded-2xl shadow-lg" />
 
 ### WireGuard
 <div class="opacity-70">par WireGuard Development Team</div>
@@ -124,17 +118,16 @@ class: gap-4
 
 # Étape 2 — Enregistrer le fichier
 
-<div class="pr-6 pt-4 text-lg leading-relaxed">
+<div class="pr-6 pt-6 text-lg leading-relaxed">
 
-Le fichier **`charlotte-vpn.conf`** qu'Axel t'a envoyé :
+Axel t'a envoyé le fichier **`charlotte-vpn.conf`**.
 
-1. Ouvre le message (Signal / WhatsApp / mail)
+Depuis le message, enregistre-le dans l'app **Fichiers** :
+**Partager → Enregistrer dans Fichiers**.
 
-2. Appuie sur le fichier, puis sur **Partager** <span class="opacity-60">(carré + flèche ⬆️)</span>
-
-3. Choisis **« Enregistrer dans Fichiers »**
-
-4. Enregistre-le dans **« Sur mon iPhone »**
+<div class="pt-4 opacity-75 text-base">
+C'est ta clé perso — garde-la pour toi.
+</div>
 
 </div>
 
