@@ -1,3 +1,5 @@
 node_modules/
 .build-home/
 dist/
+charlotte-vpn-tuto.pdf
+playwright-*/

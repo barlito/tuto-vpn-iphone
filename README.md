@@ -1,28 +1,36 @@
-# Tuto iPhone (sli.dev)
+# Tuto VPN iPhone
 
-Diaporama pas à pas pour ton ami : installer + activer le VPN sur iPhone.
-Contenu dans `slides.md`.
+Guide pas à pas pour installer le VPN sur iPhone (méthode « importer le fichier de config »).
+Publié en **PDF** sur GitHub Pages :
 
-## Le présenter / l'exporter — sans installer Node (via Docker)
+👉 **https://barlito.github.io/tuto-vpn-iphone/**
 
-```bash
-./slides.sh dev      # aperçu live  -> http://localhost:3030
-./slides.sh export   # PDF          -> tuto-vpn-iphone.pdf  (à envoyer à ton ami)
-./slides.sh build    # site statique -> ./dist/index.html
+Le PDF s'ouvre / se télécharge depuis cette page — pensé pour un usage 100 % mobile,
+sans menu ni bouton, on fait juste défiler.
+
+## Contenu
+
+```
+tuto-vpn-iphone/
+├── slides.md      # source du tuto (Slidev)
+├── package.json   # dépendances pour régénérer le PDF
+└── docs/          # site publié (GitHub Pages : branche main, dossier /docs)
+    ├── index.html          # page d'accueil qui ouvre le PDF
+    └── tuto-vpn-iphone.pdf # le tutoriel
 ```
 
-> **Le plus pratique pour ton ami** : `./slides.sh export`, puis tu lui envoies
-> le **PDF**. Il l'ouvre sur son téléphone et suit les écrans.
+## Régénérer le PDF après modif de `slides.md`
 
-## Si tu as Node installé (alternative)
+Via Docker (aucune install Node sur l'hôte) :
 
 ```bash
-npm install
-npm run dev       # http://localhost:3030
-npm run export    # PDF
+docker run --rm -v "$PWD":/work -w /work node:22-slim bash -c '
+  npm i @slidev/cli @slidev/theme-default playwright-chromium --no-audit --no-fund
+  npx playwright install --with-deps chromium
+  npx slidev export slides.md --output docs/tuto-vpn-iphone.pdf --timeout 120000
+'
+git add docs/tuto-vpn-iphone.pdf && git commit -m "Update tuto PDF" && git push
 ```
 
-## Éditer
-
-Ouvre `slides.md` : c'est du Markdown, chaque `---` sépare une diapo.
-Modifie le texte librement.
+> Note : le contenu est nominatif (« Charlotte »/« Axel ») mais ne contient **aucun secret**
+> (la clé VPN est livrée à part, jamais dans ce repo).
